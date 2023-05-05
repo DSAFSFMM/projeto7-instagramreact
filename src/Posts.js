@@ -1,10 +1,12 @@
 export default function Posts() {
+    const elementos = [
+        {title:"meowed", image:"gato-telefone", liked:"respondeai", likeN:"101.523"},
+        {title:"barked", image:"dog", liked:"adorable_animals", likeN:"99.159"},
+        {title:"barked", image:"dog", liked:"adorable_animals", likeN:"99.159"},
+        {title:"meowed", image:"gato-telefone", liked:"respondeai", likeN:"101.523"}]
     return (
         <div class="posts">
-            <Post title="meowed" image="gato-telefone" liked="respondeai" likeN="101.523"/>
-            <Post title="barked" image="dog" liked="adorable_animals" likeN="99.159"/>
-            <Post title="barked" image="dog" liked="adorable_animals" likeN="99.159"/>
-            <Post title="meowed" image="gato-telefone" liked="respondeai" likeN="101.523"/>
+            {elementos.map(elemento=><Post title={elemento.title} image={elemento.image} liked={elemento.liked} likeN={elemento.likeN}/>)}
         </div>
     );
 }

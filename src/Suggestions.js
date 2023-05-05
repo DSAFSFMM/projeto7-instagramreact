@@ -1,15 +1,17 @@
 export default function Suggestions() {
+    const elementos = [
+        { title: "bad.vibes.memes", message: "Segue você" }, 
+        { title: "chibirdart", message: "Segue você" }, 
+        { title: "razoesparaacreditar", message: "Novo no Instagram" }, 
+        { title: "adorable_animals", message: "Segue você" }, 
+        { title: "smallcutecats", message: "Segue você" }]
     return (
         <div class="sugestoes">
             <div class="titulo">
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
-            <Suggestion title="bad.vibes.memes" message="Segue você" />
-            <Suggestion title="chibirdart" message="Segue você" />
-            <Suggestion title="razoesparaacreditar" message="Novo no Instagram" />
-            <Suggestion title="adorable_animals" message="Segue você" />
-            <Suggestion title="smallcutecats" message="Segue você" />
+            {elementos.map(elemento=> <Suggestion title={elemento.title} message={elemento.message} />)}
         </div>
     );
 }
