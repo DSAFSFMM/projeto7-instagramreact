@@ -32,12 +32,10 @@ function Post(props) {
         if (iconeLike === "heart-outline") {
             setIconeLike("heart");
             setCor("red");
-            console.log(likes);
             setLikes(Number(likes) + 1);
         } else {
             setIconeLike("heart-outline");
             setCor("");
-            console.log(likes);
             setLikes(Number(likes) - 1);
         }
     }
@@ -61,7 +59,7 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img data-test="post-image" onClick={likeImg} src={urlPost} alt={props.image} />
+                <img data-test="post-image" onDoubleClick={likeImg} src={urlPost} alt={props.image} />
             </div>
 
             <div class="fundo">
