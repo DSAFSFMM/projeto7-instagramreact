@@ -21,6 +21,7 @@ function Post(props) {
     const [iconeLike, setIconeLike] = useState("heart-outline");
     let [cor, setCor] = useState("");
     let [likes, setLikes] = useState(props.likeN);
+    let [animacao, setAnimcao] = useState("animacao escondido");
     function salvaFavoritos() {
         if (iconeFav === "bookmark-outline") {
             setIconeFav("bookmark");
@@ -44,6 +45,8 @@ function Post(props) {
             setIconeLike("heart");
             setCor("red");
             setLikes(Number(likes) + 1);
+            setAnimcao("animacao");
+            setTimeout(()=>{setAnimcao("animacao escondido")}, 800);
         }
     }
     return (
@@ -59,6 +62,7 @@ function Post(props) {
             </div>
 
             <div className="conteudo">
+                <ion-icon class={animacao} cladata-test="like-post" name="heart"></ion-icon>
                 <img data-test="post-image" onDoubleClick={likeImg} src={urlPost} alt={props.image} />
             </div>
 

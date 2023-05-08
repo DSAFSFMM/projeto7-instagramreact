@@ -308,3 +308,28 @@ ion-icon {
 .red{
   color: red;
 }
+
+.conteudo{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animacao{
+  color: white;
+  position: absolute;
+  font-size: 150px;
+  animation: animate .3s;
+}
+@keyframes animate {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
+  } 
+}
+.escondido{
+  display: none;
+}
